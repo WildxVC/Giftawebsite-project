@@ -1,0 +1,413 @@
+
+/* Domain description section */
+.Hdomain::before{
+    content: "";
+    background: url(img/blob-final1.png) no-repeat center center/cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+}
+.Hdomain{
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
+    height: 100vh;
+    width: 100%;
+    align-items: center;
+}
+
+.Hdomain img{
+    margin: auto 0;
+    -webkit-animation: slide-in-top 1.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: slide-in-top 1.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+
+} 
+
+.Hdomaindesc{
+    /* flex-wrap: wrap; */
+    /* flex-direction: row-reverse; */
+    /* height: 5px; */
+    width: 50%;
+    margin-left: 5em;
+    padding: 20px 20px;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid whitesmoke;
+    border-radius: 50px;
+}
+.HdomainName{
+
+  display: flex;
+  align-items: center;
+
+}
+/* Search icon */
+.gg-search{
+   display: inline-block;
+   margin-right: 1.5em;
+   margin-top: .3em;
+}
+.HdomainName h1{
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid #F9F871; /*The typwriter cursor*/
+    margin: 2px auto;
+    color: #071a52;
+    font-weight: none; 
+    animation: 
+      typing 3.5s steps(35, end),
+     blink-caret .75s step-end infinite;  
+  }
+  
+  /* The typing effect */
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 12em }
+  }
+  @keyframes blink-caret {
+  
+    from, to { border-color: transparent }
+    50% { border-color: #F9F871; }
+    
+  }
+  .Hdomain h1{
+      font-size: calc(1.375rem + 1.5vw);
+      margin: 0 0;
+      font-weight: normal;
+  }
+
+  .Hprefix::before {
+    content: "happybirthday";
+    animation: animateprefix infinite 15s;
+    padding-left: 0px;
+    /* color: #00E0E5; */
+    color: #071a52;
+    font-weight: normal;
+}
+@keyframes animateprefix {
+
+    0% {
+        content: "happyanniversary";
+    }
+
+    50% {
+        content: "happybirthday";
+    }
+
+    75% {
+        content: "iloveyou";
+    }
+    100% {
+        content: "bestofluck";
+    }
+}
+
+.Hsuffix::before {
+    content: "";
+    animation: animatesuffix infinite 6s;
+    padding-left: 0px;
+    /* color: #00E0E5; */
+    color: #071a52;
+    font-weight: normal;
+}
+
+@keyframes animatesuffix {
+
+    0% {
+        content: ".com";
+    }
+
+    50% {
+        content: ".in";
+    }
+
+    75% {
+        content: ".co.in";
+    }
+    100% {
+        content: ".xyz";
+    }
+}
+
+/* Text in domain section */
+.Hdomaintext{
+    position: absolute;
+    top: 2em;
+    right: 1em;
+    width: 60%;
+    height: auto;
+}
+.Hdomaintext1, .Hdomaintext2,.Hdomaintext3{
+    margin-top: 2em;
+}
+
+/* Price button */
+.Hprice{
+    position: absolute;
+    bottom: 0;
+    left: 40%;
+    font-size: 1.5em;
+    -webkit-animation: slide-in-right 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: slide-in-right 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+            animation-delay: 1.3s;
+}
+
+
+
+/* css for price button  */
+.Hprice .buttons {
+    /* margin-top: -em; */
+    text-align: center;
+    border-radius: 30px;
+  }
+  
+  .blob-btn {
+    z-index: 1;
+    position: relative;
+    padding: 20px 46px;
+    margin-bottom: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #00CBF9;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    transition: color 0.5s;
+    cursor: pointer;
+    border-radius: 30px;
+  }
+  .blob-btn:before {
+    content: "";
+    z-index: 1;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border: 2px solid #00CBF9;
+    border-radius: 30px;
+  }
+  .blob-btn:after {
+    content: "";
+    z-index: -2;
+    position: absolute;
+    left: 3px;
+    top: 3px;
+    width: 100%;
+    height: 100%;
+    transition: all 0.3s 0.2s;
+    border-radius: 30px;
+  }
+  .blob-btn:hover {
+    color: #ffffff;
+    border-radius: 30px;
+  }
+  .blob-btn:hover:after {
+    transition: all 0.3s;
+    left: 0;
+    top: 0;
+    border-radius: 30px;
+  }
+  .blob-btn__inner {
+    z-index: -1;
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+    background: #ffffff;
+  }
+  .blob-btn__blobs {
+    position: relative;
+    display: block;
+    height: 100%;
+    filter: url("#goo");
+  }
+  .blob-btn__blob {
+    position: absolute;
+    top: 2px;
+    width: 50%;
+    height: 100%;
+    background: #A6F890;
+    border-radius: 100%;
+    transform: translate3d(0, 150%, 0) scale(1.7);
+    transition: transform 0.45s;
+  }
+  @supports (filter: url("#goo")) {
+    .blob-btn__blob {
+      transform: translate3d(0, 150%, 0) scale(1.4);
+    }
+  }
+  .blob-btn__blob:nth-child(1) {
+    left: 0%;
+    transition-delay: 0s;
+  }
+  .blob-btn__blob:nth-child(2) {
+    left: 30%;
+    transition-delay: 0.08s;
+  }
+  .blob-btn__blob:nth-child(3) {
+    left: 60%;
+    transition-delay: 0.16s;
+  }
+  .blob-btn__blob:nth-child(4) {
+    left: 90%;
+    transition-delay: 0.24s;
+  }
+  .blob-btn:hover .blob-btn__blob {
+    transform: translateZ(0) scale(1.7);
+  }
+  @supports (filter: url("#goo")) {
+    .blob-btn:hover .blob-btn__blob {
+      transform: translateZ(0) scale(1.4);
+    }
+  }
+
+
+/* Services section */
+.Hservices .Hcategories{
+   /* height: 40vh; */
+   text-align: center;
+   margin-top: 5rem;
+}
+.Hservices{
+   text-align: center;
+}
+/* Corousel */
+.carousel-inner{
+  height: 75vh;
+}
+.carousel-inner img{
+  height: 75vh;
+}
+
+
+
+/* Contact Section */
+#contact{
+  position: relative;
+}
+#contact .h-primary{
+  font-family: 'Bree Serif', serif;
+  font-size: 3.8rem;
+  padding: 12px;
+  text-align: center;
+}
+#contact::before{
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0.7;
+  /* background: url('img/contact.png') no-repeat center center/cover; */
+ /* background-color: #00CBF9; */
+}
+#contact-box{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 34px;
+}
+#contact-box input, 
+#contact-box textarea{
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 9px;
+  font-size: 1.1rem;
+} 
+
+#contact-box form{
+  width: 40%;
+}
+
+#contact-box label{
+ font-size: 1.3rem;
+ font-family: 'Bree Serif', serif;
+
+}
+
+#contact .btn{
+  /* text-align: center; */
+  padding: 6px 20px;
+  border: 2px solid white;
+  background-color: #64B3F4;
+  color: white;
+  margin: 17px;
+  font-size: 1.5rem;
+  border-radius: 10px;
+  cursor:pointer;
+}
+
+footer{
+  background: #A6F890;
+  font-family: 'Bree Serif', serif;
+  font-size: 1.2rem;
+  color: white;
+  padding: 9px 20px;
+  text-align: center;
+}
+
+/* Key frames */
+
+/* Animation to slide in from top  */
+@-webkit-keyframes slide-in-top {
+    0% {
+      -webkit-transform: translateY(-300px);
+              transform: translateY(-300px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  @keyframes slide-in-top {
+    0% {
+      -webkit-transform: translateY(-300px);
+              transform: translateY(-300px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+
+  /* Animation to slide in from right */
+  @-webkit-keyframes slide-in-right {
+    0% {
+      -webkit-transform: translateX(1000px);
+              transform: translateX(1000px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  @keyframes slide-in-right {
+    0% {
+      -webkit-transform: translateX(1000px);
+              transform: translateX(1000px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+
+ 
