@@ -2,7 +2,7 @@
 /* Domain description section */
 .Hdomain::before{
     content: "";
-    background: url(img/blob-final1.png) no-repeat center center/cover;
+    background: url(img/blob-final.png) no-repeat center center/cover;
     position: absolute;
     top: 0;
     left: 0;
